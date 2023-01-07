@@ -4,7 +4,7 @@ const router = Router();
 
 router.post('/send-message-form', async (req, res) => {
     const {name, email, message} = req.body;
-
+    const recibidor = 'horaios.contact@gmail.com';
     contentHTML = `
         <h1>User Information</h1>
         <ul>
@@ -27,7 +27,7 @@ router.post('/send-message-form', async (req, res) => {
 
     const info = await transporter.sendMail({
         from: "'Horaios Server' <horaios.contact@gmail.com",
-        to: 'horaios.contact@gmail.com',
+        to: recibidor,
         subject: 'Website contact form',
         html: contentHTML
     });
