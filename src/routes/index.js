@@ -27,7 +27,7 @@ router.post('/send-message-form', async (req, res) => {
 
     const info = await transporter.sendMail({
         from: "'Horaios Server' <horaios.contact@gmail.com",
-        to: 'matirrudo@gmail.com',
+        to: 'horaios.contact@gmail.com',
         subject: 'Website contact form',
         html: contentHTML
     });
